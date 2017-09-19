@@ -1,0 +1,39 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//  SPECIFIC TO INDEX.HTML
+// .tasks {
+//   display:inline-block;
+// }
+//
+// #list {
+//   float: right;
+// }
+#list {
+  float: right;
+  width: 500px;
+  border-style: solid;
+  border-radius: 20%;
+  // height: 500px;
+  margin-right: 20px;
+  font-size: 16px;
+}
+#list li {
+  margin-bottom: 10px;
+}
+#list h2 {
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+ol {
+  border-top: solid;
+  padding-top: 20px;
+  margin-top: 4px;
+}
+.complete {
+  text-decoration: line-through;
+}

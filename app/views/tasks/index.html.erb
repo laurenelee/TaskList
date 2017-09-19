@@ -1,0 +1,31 @@
+<h1> Lauren's Tasklist:</h1>
+
+<main id="list">
+  <h2> Tasks</h2>
+  <ol >
+    <% @tasks.each do |task| %>
+    <li>
+      <% if task.status == "complete" %>
+      <strong class="complete"> <%= task.name %> </strong>
+      <% else %>
+      <strong> <%= task.name %> </strong> <p>
+      <%= task.description %> : <%= task.completion_date %> </p>
+
+
+          <p><%= link_to  "Mark Complete", mark_complete_path(task.id), method: :patch %> |
+         <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to "Delete", task_path(task.id) %></p>
+      <% end %>
+    </li>
+  <% end %>
+</ol>
+</main>
+
+</div>
+
+
+
+      <!-- <% if task[:status] == "complete" %>
+      <strong class="complete"> <%= task[:description] %> </strong>
+      <% else %>
+      <strong><%= task[:description] %></strong> by: <%= task[:due_date] %> status: <%= task[:status] %>
+      <% end %> -->
