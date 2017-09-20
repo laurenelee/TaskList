@@ -11,9 +11,12 @@
       <strong> <%= task.name %> </strong> <p>
       <%= task.description %> : <%= task.completion_date %> </p>
 
+      <p>
+         <!-- <%= link_to  "Mark Complete", mark_complete_path(task.id), method: :patch %> | -->
+         <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to "Delete", task, :method => :delete %>
+         | <%= link_to "Complete", complete_task_path(task), method: :put %>
 
-          <p><%= link_to  "Mark Complete", mark_complete_path(task.id), method: :patch %> |
-         <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to "Delete", task_path(task.id) %></p>
+      </p>
       <% end %>
     </li>
   <% end %>
@@ -21,11 +24,3 @@
 </main>
 
 </div>
-
-
-
-      <!-- <% if task[:status] == "complete" %>
-      <strong class="complete"> <%= task[:description] %> </strong>
-      <% else %>
-      <strong><%= task[:description] %></strong> by: <%= task[:due_date] %> status: <%= task[:status] %>
-      <% end %> -->

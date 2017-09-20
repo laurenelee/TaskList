@@ -2893,3 +2893,299 @@ Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.0ms)
 NameError (undefined local variable or method `task' for #<TasksController:0x007fad8730d7e8>):
   
 app/controllers/tasks_controller.rb:29:in `mark_complete'
+Started PATCH "/tasks/2/mark_complete" for 127.0.0.1 at 2017-09-19 16:18:50 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"7rUnN+8/ltGETUUUNT/Xtg2G5/xWPtWaeA8ilNj4IiMEPQs1RnCQBWrGQ5JElrnPeJLViBibhxDzl3xg2CWP5g==", "id"=>"2"}
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `task' for #<TasksController:0x007fad89e18ac8>):
+  
+app/controllers/tasks_controller.rb:29:in `mark_complete'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 16:19:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (323.4ms)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fad8c3df428>:0x007fad89fd5528>
+Did you mean?  @tasks):
+    25: 
+    26: 
+    27: 
+    28:   <!-- <% if task[:status] == "complete" %>
+    29:   <strong class="complete"> <%= task[:description] %> </strong>
+    30:   <% else %>
+    31:   <strong><%= task[:description] %></strong> by: <%= task[:due_date] %> status: <%= task[:status] %>
+  
+app/views/tasks/index.html.erb:28:in `_app_views_tasks_index_html_erb__1672142498093708172_70191660576660'
+Started GET "/tasks/new" for 127.0.0.1 at 2017-09-19 16:19:53 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 16:19:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (277.2ms)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fad8c3df428>:0x007fad8c457310>
+Did you mean?  @tasks):
+    24: 
+    25: 
+    26: 
+    27:   <!-- <% if task[:status] == "complete" %>
+    28:   <strong class="complete"> <%= task[:description] %> </strong>
+    29:   <% else %>
+    30:   <strong><%= task[:description] %></strong> by: <%= task[:due_date] %> status: <%= task[:status] %>
+  
+app/views/tasks/index.html.erb:27:in `_app_views_tasks_index_html_erb__1672142498093708172_70191679717000'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 16:20:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (174.0ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fad8c3df428>:0x007fad8b8a2538>
+Did you mean?  @tasks):
+    24: 
+    25: 
+    26: 
+    27:   <!-- <% if task[:status] == "complete" %>
+    28:   <strong class="complete"> <%= task[:description] %> </strong>
+    29:   <% else %>
+    30:   <strong><%= task[:description] %></strong> by: <%= task[:due_date] %> status: <%= task[:status] %>
+  
+app/views/tasks/index.html.erb:27:in `_app_views_tasks_index_html_erb__1672142498093708172_70191673581360'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 16:20:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (280.2ms)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fad8c3df428>:0x007fad8c0f22d8>
+Did you mean?  @tasks):
+    23: 
+    24: 
+    25: 
+    26:   <!-- <% if task[:status] == "complete" %>
+    27:   <strong class="complete"> <%= task[:description] %> </strong>
+    28:   <% else %>
+    29:   <strong><%= task[:description] %></strong> by: <%= task[:due_date] %> status: <%= task[:status] %>
+  
+app/views/tasks/index.html.erb:26:in `_app_views_tasks_index_html_erb__1672142498093708172_70191677937280'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 16:20:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (220.0ms)
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fad8c3df428>:0x007fad8c3e7420>
+Did you mean?  @tasks):
+    23: 
+    24: 
+    25: 
+    26:   <!-- <% if task[:status] == "complete" %>
+    27:   <strong class="complete"> <%= task[:description] %> </strong>
+    28:   <% else %>
+    29:   <strong><%= task[:description] %></strong> by: <%= task[:due_date] %> status: <%= task[:status] %>
+  
+app/views/tasks/index.html.erb:26:in `_app_views_tasks_index_html_erb__1672142498093708172_70191675064940'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 16:20:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (227.9ms)
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0x007fad8c3df428>:0x007fad87399d60>
+Did you mean?  @tasks):
+    25: 
+    26: 
+    27: 
+    28:       <!-- <% if task[:status] == "complete" %>
+    29:       <strong class="complete"> <%= task[:description] %> </strong>
+    30:       <% else %>
+    31:       <strong><%= task[:description] %></strong> by: <%= task[:due_date] %> status: <%= task[:status] %>
+  
+app/views/tasks/index.html.erb:28:in `_app_views_tasks_index_html_erb__1672142498093708172_70191637388240'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 16:21:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 90ms (Views: 79.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/1/mark_complete" for 127.0.0.1 at 2017-09-19 16:21:22 -0700
+Processing by TasksController#mark_complete as HTML
+  Parameters: {"authenticity_token"=>"vRJlLIyfU2swE9nhkZXfYkyUME8Fcocy0UtvU3AmvIpXmkkuJdBVv96Y32fgPLEbOYACO0vX1bha0zGncPsRTw==", "id"=>"1"}
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `task' for #<TasksController:0x007fad8bbd0e08>):
+  
+app/controllers/tasks_controller.rb:29:in `mark_complete'
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 16:51:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 130ms (Views: 69.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-19 20:20:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 82ms (Views: 69.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 08:34:47 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 277ms (Views: 262.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 08:36:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for 1:Integer
+Did you mean?  to_yaml):
+    13: 
+    14:       <p>
+    15:          <%= link_to  "Mark Complete", mark_complete_path(task.id), method: :patch %> |
+    16:          <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to "Delete", task.id, :method => :delete %>
+    17:       </p>
+    18:       <% end %>
+    19:     </li>
+  
+app/views/tasks/index.html.erb:16:in `block in _app_views_tasks_index_html_erb___3472443298852348310_70125935357540'
+app/views/tasks/index.html.erb:6:in `_app_views_tasks_index_html_erb___3472443298852348310_70125935357540'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 08:36:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 08:47:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 67ms (Views: 53.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 08:47:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/tasks/complete.2" for 127.0.0.1 at 2017-09-20 08:47:38 -0700
+Processing by TasksController#complete as 
+  Parameters: {"authenticity_token"=>"hGWN5TYpL1JpN1+NvBGS7K6wEMJkI2Ez/v26JRITPOBu7aHnn2Yphoe8WQvNuPyV26QitiqGM7l1ZeTREs6RJQ=="}
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<TasksController:0x007f8eedd57ef0>):
+  
+app/controllers/tasks_controller.rb:35:in `complete'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 08:47:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 08:48:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 08:48:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/tasks/complete.1" for 127.0.0.1 at 2017-09-20 08:49:10 -0700
+Processing by TasksController#complete as 
+  Parameters: {"authenticity_token"=>"6lEmZD6fZK8ir1Pl0/nSdqK/vjjYi3BqG4HPQczG7lAA2Qpml9Bie8wkVWOiULwP16uMTJYuIuCQGZG1zBtDlQ=="}
+Completed 500 Internal Server Error in 167ms
+
+
+  
+NameError (undefined local variable or method `current_user' for #<TasksController:0x007f8ef38b3510>):
+  
+app/controllers/tasks_controller.rb:35:in `complete'
+Started GET "/tasks" for 127.0.0.1 at 2017-09-20 09:18:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (3.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 143ms (Views: 82.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2017-09-20 09:19:16 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 225ms (Views: 170.2ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/tasks/complete.1" for 127.0.0.1 at 2017-09-20 09:19:18 -0700
+Processing by TasksController#complete as 
+  Parameters: {"authenticity_token"=>"IbrBDVeWVzDSa/scOZceBETgGuh4TW/9cAZADmO2HuDLMu0P/tlR5Dzg/ZpIPnB9MfQonDboPXf7nh76Y2uzJQ=="}
+Completed 500 Internal Server Error in 366ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<TasksController:0x007f8eef414918>):
+  
+app/controllers/tasks_controller.rb:35:in `complete'
