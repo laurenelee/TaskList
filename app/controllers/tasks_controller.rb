@@ -14,26 +14,27 @@ class TasksController < ApplicationController
   end
 
   def new
-    # need to make TASK not BOOK
-    # task = Task.new(title: params[:book][:title], author: params[:book][:author])
   end
 
   def create
+    task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
+    task.save
+    redirect_to('/tasks')
   end
 
   def update
   end
 
   def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to('/tasks')
   end
 
   def mark_complete
-    task.status == "complete"
-  end
-
-  def complete
-    @task = current_user.tasks.find(params[:id])
-    @task.completed = true
+    @task = Task.find(params[:id])
+    @task.status = false
+    # logic should it delete it then? or strikethru?
     @task.save
     redirect_to tasks_path
   end

@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   delete "/tasks/:id", to: "tasks#destroy"
 
 
-  patch "/tasks/:id/mark_complete", to: "tasks#mark_complete", as: "mark_complete"
-  match '/tasks/complete' => 'tasks#complete', as: 'complete_task', via: :put
 
+  patch "/tasks/:id/mark_complete", to: "tasks#mark_complete", as: "mark_complete"
 end

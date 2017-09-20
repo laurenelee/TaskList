@@ -9,18 +9,23 @@
       <strong class="complete"> <%= task.name %> </strong>
       <% else %>
       <strong> <%= task.name %> </strong> <p>
-      <%= task.description %> : <%= task.completion_date %> </p>
+        <%= task.description %> : <%= task.completion_date %> </p>
 
-      <p>
-         <!-- <%= link_to  "Mark Complete", mark_complete_path(task.id), method: :patch %> | -->
-         <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to "Delete", task, :method => :delete %>
-         | <%= link_to "Complete", complete_task_path(task), method: :put %>
+        <p>
+          <%= link_to "Edit", edit_task_path(task.id) %> | <%= link_to 'Delete',
+          task_path(task),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %> |
 
-      </p>
+
+         <%= link_to  "Mark Complete", mark_complete_path(task.id), method: :patch %>
+
+
+        </p>
+        <% end %>
+      </li>
       <% end %>
-    </li>
-  <% end %>
-</ol>
-</main>
+    </ol>
+  </main>
 
 </div>
