@@ -5,6 +5,17 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    @task.name = params[:task][:name]
+    @task.description = params[:task][:description]
+    @task.completion_date = params[:task][:completion_date]
+
+    @task.save
+    redirect_to('/tasks')
   end
 
   def show
@@ -12,15 +23,13 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def create
     task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
     task.save
     redirect_to('/tasks')
-  end
-
-  def update
   end
 
   def destroy
@@ -32,7 +41,6 @@ class TasksController < ApplicationController
   def mark_complete
     @task = Task.find(params[:id])
     @task.status = false
-    # logic should it delete it then? or strikethru?
     @task.save
     redirect_to tasks_path
   end

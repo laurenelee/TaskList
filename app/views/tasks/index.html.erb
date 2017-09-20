@@ -12,7 +12,9 @@
 
       <% else %>
       <strong> <%= link_to task.name, task_path(task) %> </strong>
-      <p> <%= task.description %> : <%= task.completion_date %> </p>
+      <p> <%= task.description %>
+
+      <em>Do by: </em><%= task.completion_date %> </p>
 
       <p><%= link_to "Edit", edit_task_path(task.id) %>
 

@@ -1,22 +1,55 @@
+<%= form_for @task do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :completion_date %>
+<%= f.date_field :completion_date %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<p><%= f.submit "Add Task" %></p>
+<% end %>
+
+
+
+<!--  refactored code:
+
+<%= form_tag tasks_path, method: :post do %>
+
+<%= label_tag "task[name]", "Task Name" %>
+<%= text_field_tag "task[name]" %>
+
+<%= label_tag "task[description]", "Description" %>
+<%= text_field_tag "task[description]" %>
+
+<%= label_tag "task[completion_date]", "Completion Date" %>
+<%= date_field_tag "task[completion_date]" %>
+
+<%= submit_tag "Add Task" %>
+<% end %>
+
+REFAXTORIERD
 <body>
-  <form action="/tasks" method="post" accept-charset="utf-8">
+<form action="/tasks" method="post" accept-charset="utf-8">
 
-    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
+<label for="task">Task Name:</label>
+<input type="text" name="task[name]" value="" id="name">
 
-    <label for="task">Task Name:</label>
-    <input type="text" name="task[name]" value="" id="name">
+<label for="completion_date">Completion Date:</label>
+<input type="date" name="task[completion_date]" value="" id="completion_date">
 
-    <label for="completion_date">Completion Date:</label>
-    <input type="date" name="task[completion_date]" value="" id="completion_date">
+<label for="description">Description:</label>
+<textarea type="text" name="task[description]" value="" id="description" ></textarea>
 
-    <label for="description">Description:</label>
-    <textarea type="text" name="task[description]" value="" id="description" ></textarea>
-
-    <p><input type="submit" value="Add Task" id="button"></p>
-  </form>
+<p><input type="submit" value="Add Task" id="button"></p>
+</form>
 </body>
-<!--  EXAMPLE FROM TEXT BOOK:
+
+EXAMPLE FROM TEXTBOOK
 <form action="/books" method="post" accept-charset="utf-8">
 <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
