@@ -50,3 +50,9 @@ aside {
  h2 {
    color: rgb(176, 65, 168);
  }
+img {
+  height: 40px;
+}
+.details {
+  text-align: center;
+}
