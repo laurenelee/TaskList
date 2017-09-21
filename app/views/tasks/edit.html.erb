@@ -1,13 +1,13 @@
-<h2> editing task </h2>
+<h2> Editing your task </h2>
 <%= form_for @task do |f| %>
 
-<%= f.label :name %>
+<%= f.label :name, "Task Name:" %>
 <%= f.text_field :name %>
 
-<%= f.label :completion_date %>
+<%= f.label :completion_date, "Complete By:" %>
 <%= f.date_field :completion_date %>
 
-<%= f.label :description %>
+<%= f.label :description, "Description:"%>
 <%= f.text_field :description %>
 
 <p><%= f.submit "Edit Task" %></p>
