@@ -16962,3 +16962,84 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 102ms (Views: 88.6ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 14:02:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (29.8ms)
+  Rendered tasks/index.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 154ms (Views: 136.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/12/edit" for 127.0.0.1 at 2017-09-22 14:02:18 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (26.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 101ms (Views: 91.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/12" for 127.0.0.1 at 2017-09-22 14:02:20 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zt6nQM7/dsLgYb2eAyJP/VvBoKYSEMe15i1VTWi/0DRSiLwRuZo86LgCXGdHbylMPRtJ48LUHg1XUI82Z8Ygtg==", "task"=>{"name"=>"Grocery Shop", "completion_date"=>"2017-10-26", "description"=>"-Don't forget bacon\r\n-apples\r\n-banana\r\n-kale\r\n"}, "commit"=>"Edit", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `task_params' for #<Task:0x007fa5c6781fb8>):
+  
+app/controllers/tasks_controller.rb:22:in `update'
+Started PATCH "/tasks/12" for 127.0.0.1 at 2017-09-22 14:03:03 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KXfObMDozGrkhzNlK6/ELEtNz25irDHPVfnJ7i21NJfD/+JuaafKvgoMNeNaBqpVPln9GiwJY0XeYZcaLWiZUg==", "task"=>{"name"=>"Grocery Shop", "completion_date"=>"2017-10-26", "description"=>"-Don't forget bacon\r\n-apples\r\n-banana\r\n-kale\r\n"}, "commit"=>"Edit", "id"=>"12"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `task_params' for #<Task:0x007fa5c35d3160>):
+  
+app/controllers/tasks_controller.rb:21:in `update'
+Started PATCH "/tasks/12" for 127.0.0.1 at 2017-09-22 14:03:12 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KXfObMDozGrkhzNlK6/ELEtNz25irDHPVfnJ7i21NJfD/+JuaafKvgoMNeNaBqpVPln9GiwJY0XeYZcaLWiZUg==", "task"=>{"name"=>"Grocery Shop", "completion_date"=>"2017-10-26", "description"=>"-Don't forget bacon\r\n-apples\r\n-banana\r\n-kale\r\n"}, "commit"=>"Edit", "id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/12
+Completed 302 Found in 16ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/12" for 127.0.0.1 at 2017-09-22 14:03:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/12/edit" for 127.0.0.1 at 2017-09-22 14:03:14 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 14:03:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (4.4ms)
+  Rendered tasks/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 112ms (Views: 108.6ms | ActiveRecord: 0.3ms)
+
+
