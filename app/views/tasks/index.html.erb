@@ -1,31 +1,10 @@
 <h1> Lauren's Tasklist:</h1>
 
 <main id="list">
-
   <h2> Tasks</h2>
 
   <ol >
-    <% @tasks.each do |task| %>
-    <li>
-      <% if task.status == false %>
-      <strong id="boolean"> <%= task.name %> </strong> <p> <%= link_to "Unmark Complete", unmark_complete_path(task.id), method: :patch %> </p>
-
-      <% else %>
-      <strong> <%= link_to task.name, task_path(task) %> </strong>
-
-      <p><%= link_to "Edit", edit_task_path(task.id) %>
-
-        | <%= link_to 'Delete',
-        task_path(task),
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %> |
-
-        <%= link_to  "Mark Complete", mark_complete_path(task.id), method: :patch %>
-
-      </p>
-      <% end %>
-    </li>
-    <% end %>
+      <%= render partial: "task_summary", locals: {action: "task_summary"} %>
   </ol>
 </main>
 

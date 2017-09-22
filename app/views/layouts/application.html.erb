@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>TaskList</title>
+  <%= favicon_link_tag "avocado.png" %>
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +10,7 @@
 <div class="tasks">
   <header>
     <aside>
+    
       <ul>
         <li><%= link_to "All Tasks", tasks_path %> </li>
         <li><%= link_to "New Task", new_task_path %></li>

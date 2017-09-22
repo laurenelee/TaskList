@@ -16,6 +16,7 @@
   border-style: solid;
   border-radius: 20%;
   // height: 500px;
+  padding-bottom: 20px;
   margin-right: 20px;
   font-size: 16px;
 }
@@ -37,5 +38,9 @@ ol {
   text-decoration: line-through;
 }
 a {
-  text-decoration: none; 
+  text-decoration: none;
+}
+.delete {
+  color: rgb(185, 45, 208);
+  font-family: cursive;
 }

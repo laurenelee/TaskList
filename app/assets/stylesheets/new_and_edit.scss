@@ -1,6 +1,6 @@
 form {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 2em;
 }
 label {
@@ -13,4 +13,16 @@ input {
 .new_and_edit {
   font-size: 40px;
   text-align: center;
+}
+.create {
+  background-color: rgb(169, 236, 226);
+  border-radius: 20%;
+  height: 50px;
+  font-family: courier;
+  width: 100px;
+  font-size: 30px;
+  color: rgb(173, 28, 98);
+    &:hover {
+      color: rgb(110, 218, 83);
+  }
 }

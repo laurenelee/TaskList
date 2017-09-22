@@ -13,13 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
 body {
     background-image: url("waterm.jpg");
     background-image: contain;
 }
 aside {
    margin-left: 5px;
-   // background-color: rgba(229, 255, 222, 0.65);
    // width: 100px;
    position: fixed;
    top: 15%;
@@ -40,7 +40,6 @@ aside {
    padding: 20px;
    margin-bottom: 5px;
  }
-
  body {
    font-family: courier;
  }
@@ -51,7 +50,7 @@ aside {
    height: 20px;
    margin: 0 auto;
  }
- h2 {
+ h2, h1 {
    color: rgb(176, 65, 135);
    text-shadow: 2px 2px rgb(218, 132, 212);
  }
