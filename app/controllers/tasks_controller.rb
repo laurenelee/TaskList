@@ -46,6 +46,7 @@ class TasksController < ApplicationController
   def mark_complete
     @task = Task.find(params[:id])
     @task.status = false
+    @task.task_completion_date = DateTime.now
     @task.save
     redirect_to tasks_path
   end
