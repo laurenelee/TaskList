@@ -19,8 +19,8 @@ class TasksController < ApplicationController
     @task.description = params[:task][:description]
     @task.completion_date = params[:task][:completion_date]
     @task.save
-    # redirect_to task_path(@task)
-    redirect_to('/tasks')
+    redirect_to task_path(@task)
+    # redirect_to('/tasks')
   end
 
   def show
