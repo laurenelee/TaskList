@@ -1,0 +1,14 @@
+<h2 class ="new_and_edit"> Your Task </h2>
+<%= form_for @task do |f| %>
+
+<%= f.label :name, "Task Name:" %>
+<%= f.text_field :name %>
+
+<%= f.label :completion_date, "Complete By:" %>
+<%= f.date_field :completion_date %>
+
+<%= f.label :description, "Description:" %>
+<%= f.text_area :description, :cols => "40", :rows => "10"  %>
+
+<%= f.submit action_name %>
+<% end %>

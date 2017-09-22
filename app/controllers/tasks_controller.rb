@@ -9,12 +9,17 @@ class TasksController < ApplicationController
   end
 
   def update
+    # task_updates = params[:task]
+    # @task = Task.find(params[:id])
+    # @task.update_attributes(task_updates)
+    # @task.save
+
     @task = Task.find(params[:id])
     @task.name = params[:task][:name]
     @task.description = params[:task][:description]
     @task.completion_date = params[:task][:completion_date]
-
     @task.save
+    # redirect_to task_path(@task)
     redirect_to('/tasks')
   end
 

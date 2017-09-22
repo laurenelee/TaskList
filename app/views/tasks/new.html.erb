@@ -1,16 +1,4 @@
-<%= form_for @task do |f| %>
-
-<%= f.label :name, "Task Name:" %>
-<%= f.text_field :name %>
-
-<%= f.label :completion_date, "Complete By:" %>
-<%= f.date_field :completion_date %>
-
-<%= f.label :description, "Description:" %>
-<%= f.text_field :description %>
-
-<p><%= f.submit "Add Task" %></p>
-<% end %>
+<%= render partial: "form", locals: { action_name: "New" } %>
 
 
 
