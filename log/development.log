@@ -16953,3 +16953,12 @@ Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.4ms)
 
 
   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2017-09-22 13:29:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (20.4ms)
+  Rendered tasks/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 102ms (Views: 88.6ms | ActiveRecord: 1.6ms)
+
+
