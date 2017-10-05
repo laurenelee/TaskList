@@ -15,6 +15,12 @@
 
   <%= link_to  "Mark Complete", mark_complete_path(task.id), method: :patch %>
 
+  <% if task.person_id %>
+  <%= task.person_id %>
+  <% else %>
+  <%= "person unknown" %>
+  <% end %>
+
 </p>
 <% end %>
   </li>

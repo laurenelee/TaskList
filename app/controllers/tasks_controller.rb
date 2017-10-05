@@ -18,7 +18,7 @@ class TasksController < ApplicationController
     @task.name = params[:task][:name]
     @task.description = params[:task][:description]
     @task.completion_date = params[:task][:completion_date]
-    task_params 
+    task_params
     @task.save
 
     redirect_to task_path(@task)
@@ -34,7 +34,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
+    task = Task.new(
+    name: params[:task][:name], 
+    description: params[:task][:description], completion_date: params[:task][:completion_date])
     task.save
     redirect_to('/tasks')
   end
