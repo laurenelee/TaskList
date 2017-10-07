@@ -1,4 +1,3 @@
-require 'date'
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
@@ -13,15 +12,10 @@ class TasksController < ApplicationController
     # @task = Task.find(params[:id])
     # @task.update_attributes(task_updates)
     # @task.save
-
-    @task = Task.find(params[:id])
-    @task.name = params[:task][:name]
-    @task.description = params[:task][:description]
-    @task.completion_date = params[:task][:completion_date]
-    task_params 
-    @task.save
-
-    redirect_to task_path(@task)
+    task = Task.find(params[:id])
+    task.update(task_params)
+    task.save
+    redirect_to task_path(task)
     # redirect_to('/tasks')
   end
 
@@ -34,7 +28,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
+    task = Task.new(task_params)
     task.save
     redirect_to('/tasks')
   end
@@ -42,7 +36,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to('/tasks')
+    redirect_to tasks_path
   end
 
   def mark_complete
